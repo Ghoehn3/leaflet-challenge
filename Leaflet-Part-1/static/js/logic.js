@@ -34,12 +34,12 @@ let myMap = L.map("map", {
   
     function getColor(d) {
   
-      return d > 90  ? '#00FF00' :
-             d > 70  ? '#99FF00' :
-             d > 50  ? '#FFFF00' :
-             d > 30  ? '#FFCC00' :
-             d > 10  ? '#FF6600' :
-             d > -10 ? '#FF0000' :
+      return d < -10  ? '#00FF00' :
+             d < 10  ? '#99FF00' :
+             d < 30  ? '#FFFF00' :
+             d < 50  ? '#FFCC00' :
+             d < 70  ? '#FF6600' :
+             d < 90 ? '#FF0000' :
                        '#FED976' ;
     };
   
